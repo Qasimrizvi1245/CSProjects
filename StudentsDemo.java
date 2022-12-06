@@ -130,7 +130,7 @@ class Students implements StudentsADT {
             if (this.courses != null) {
                 Course current = this.courses;
                 while (current != null) {
-                    s.append(current).append("\n");
+                    s.append("-> ").append(current).append("\n");
                     current = current.getLink();
                 }
             }
@@ -214,21 +214,6 @@ public class StudentsDemo
     private static final Scanner key = new Scanner(System.in);
     public static void main(String[] args)
     {
-        System.out.println();
-
-        System.out.println("Hello! Welcome to Course Planner");
-
-        System.out.println();
-
-        System.out.println("You can currently change 3 student's Course Planner.");
-        System.out.println("The first student's ID is 111, The second student's ID is 1234, The third student's ID is 2357.");
-
-        System.out.println();
-
-        System.out.println("");
-        System.out.println("These courses were automatically added.");
-        System.out.println("HIS101 successfully added.");
-
         Students students = new Students(10);
         students.addStudent(1111);
         students.addStudent(1234);
